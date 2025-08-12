@@ -1,94 +1,150 @@
-.product-display{
-    display: flex;
-    margin: 0px 170px;
+.product-display {
+  display: flex;
+  flex-wrap: wrap; /* allow stacking on small screens */
+  gap: 2rem;
+  padding: 1rem;
+  justify-content: center;
 }
-.productdiaplay-left{
-    display: flex;
-    gap: 17px;
+
+.productdiaplay-left {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
-.productdisplay-imglist{
-    display: flex;
+
+.productdisplay-imglist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.productdisplay-imglist img {
+  height: 140px;
+  width: auto;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.productdiaplay-main-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.productdiaplay-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+.productdiaplay-right h1 {
+  color: black;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.productdiaplay-right-star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.productdisplay-right-prices {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.productdisplay-right-price-old {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.productdisplay-right-price-new {
+  color: red;
+}
+
+.productdisplay-right-size h1 {
+  margin-top: 1rem;
+  color: grey;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.productdisplay-right-sizes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.productdisplay-right-sizes div {
+  padding: 0.75rem 1rem;
+  background-color: beige;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.productdiaplay-right button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: red;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.productdiaplay-right button:hover {
+  background: darkred;
+}
+
+.productdisplay-right-category {
+  margin-top: 0.5rem;
+}
+
+.productdisplay-right-category span {
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .product-display {
+    padding: 1rem;
+  }
+
+  .productdiaplay-main-img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-display {
     flex-direction: column;
-    gap: 16px;
-
-}
-.productdisplay-imglist img{
-    height: 160px;
-
-}.productdiaplay-main-img{
-    width: 586px;
-    height: 700px;
-
-}
-.productdiaplay-right{
-    display: flex;
-    flex-direction: column;
-    margin: 0px 70px;
-    
-}
-.productdiaplay-right h1{
-    color: black;
-    font-size: 40px;
-    font-weight: 700;
-
-}
-.productdiaplay-right-star{
-    display: flex;
     align-items: center;
-    margin-top: 13px;
-    gap: 5px;
-    color: black;
-    font-size: 16px;
-}
-.productdisplay-right-prices{
-    display: flex;
-    margin: 14px 0px;
-    gap: 30px;
-    font-size: 24px;
-    font-weight: 700;
-}
-.productdisplay-right-price-old{
-    color: grey;
-    text-decoration: line-through;
-}
-.productdisplay-right-price-new{
-    color: red;
-}
-.productdisplay-right-size h1{
-    margin-top: 55px;
-    color: grey;
-    font-size: 20px;
-    font-weight: 600;
-}
-.productdisplay-right-sizes{
-    display: flex;
-    margin: 30px  0px;
-    gap: 20px;
-}
-.productdisplay-right-sizes div{
-    padding: 18px 24px;
-    background-color: beige;
-    border: 1px solid white;
-    cursor: pointer;
-}
-.productdiaplay-right button{
-    padding: 20px 40px;
-    width: 200px;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    background: red;
-    margin-bottom: 40px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    cursor: pointer;
-}
-.productdisplay-right-category{
-    margin-top: 10px;
+  }
 
-}
-.productdisplay-right-category span{
-    font-weight: 600;
-    
+  .productdiaplay-left {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productdisplay-imglist {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .productdisplay-imglist img {
+    height: 80px;
+  }
+
+  .productdiaplay-main-img {
+    max-width: 100%;
+  }
 }

@@ -1,42 +1,79 @@
+.shop-categorybanner {
+  display: block;
+  margin: 30px auto;
+  width: 85%;
+  max-width: 1200px;
+}
 
-.shop-categorybanner{
-display: block;
-margin: 30px auto;
-width: 85%;
+.shop-category-indexsort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-.shop-category-indexsort{
-    display: flex;
-    margin: 0px 170px;
-    justify-content: space-between;
-    align-items: center;
-}
-.shopcategory-sort{
-    padding: 10px 20px;
-    border: 1px solid rgb(59, 53, 53);
-    border-radius: 40px;
 
+.shopcategory-sort {
+  padding: 10px 20px;
+  border: 1px solid rgb(59, 53, 53);
+  border-radius: 40px;
+  background: white;
 }
-.shop-category-indexsort p span{
-    font-weight: 600;
-}
-.shopcategory-products{
-    margin: 20px 70px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 80px;
 
+.shop-category-indexsort p span {
+  font-weight: 600;
 }
-.shop-category-loadmore{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 150px auto;
-    border: 1px solid black;
-    border-radius: 75px;
-    width: 330px;
-    height: 69px;
-    background-color: rgb(244, 241, 237);
-    color: black;
-    font-size: 18px;
-    font-weight: 800;
+
+.shopcategory-products {
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
+
+.shop-category-loadmore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+  border: 1px solid black;
+  border-radius: 75px;
+  width: fit-content;
+  padding: 0.75rem 2rem;
+  background-color: rgb(244, 241, 237);
+  color: black;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.shop-category-loadmore:hover {
+  background-color: rgb(230, 226, 220);
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .shop-categorybanner {
+    width: 90%;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .shop-category-loadmore {
+    font-size: 16px;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+  }
+
+  .shop-category-indexsort p {
+    font-size: 14px;
+  }
+}
+
